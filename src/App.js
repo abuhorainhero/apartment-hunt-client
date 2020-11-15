@@ -7,6 +7,7 @@ import {
   Link
 } from "react-router-dom";
 import NotFound from './componets/NotFound/NotFound';
+import BookingList from './componets/Dashboard/BookingList/BookingList';
 
 function App() {
   return (
@@ -19,6 +20,16 @@ function App() {
           <h1>work in Home (Mamun vai)</h1>
         </Route>
 
+
+        <Route path="/bookingList">
+          <BookingList />
+        </Route>
+        <Route path="/addHouse">
+
+        </Route>
+        <Route path="/myRent">
+
+        </Route>
 
         <Route path="*">
           <NotFound />
