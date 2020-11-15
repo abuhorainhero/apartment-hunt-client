@@ -1,4 +1,4 @@
-import './App.css';
+import './App.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {
   BrowserRouter as Router,
@@ -8,6 +8,8 @@ import {
 } from "react-router-dom";
 import NotFound from './componets/NotFound/NotFound';
 import BookingList from './componets/Dashboard/BookingList/BookingList';
+import Login from './componets/Login/Login';
+import Ragister from './componets/Ragister/Ragister';
 
 function App() {
   return (
@@ -24,11 +26,18 @@ function App() {
         <Route path="/bookingList">
           <BookingList />
         </Route>
+
         <Route path="/addHouse">
 
         </Route>
-        <Route path="/myRent">
+        <Route path="/login">
+          <Login/>
+        </Route>
+        <Route path="/ragister">
+          <Ragister/>
+        </Route>
 
+        <Route path="/myRent">
         </Route>
 
         <Route path="*">
