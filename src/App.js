@@ -8,6 +8,8 @@ import {
 } from "react-router-dom";
 import NotFound from './componets/NotFound/NotFound';
 import BookingList from './componets/Dashboard/BookingList/BookingList';
+import MyRent from './componets/Dashboard/MyRent/MyRent';
+import AddHouse from './componets/Dashboard/AddHouse/AddHouse';
 
 function App() {
   return (
@@ -25,10 +27,10 @@ function App() {
           <BookingList />
         </Route>
         <Route path="/addHouse">
-
+          <AddHouse />
         </Route>
         <Route path="/myRent">
-
+          <MyRent />
         </Route>
 
         <Route path="*">
