@@ -2,8 +2,8 @@ import React from 'react';
 import DbNavbar from '../DbNavbar/DbNavbar';
 import DbSidebar from '../DbSidebar/DbSidebar';
 
-const BookingList = () => {
-    // state
+const MyRent = () => {
+    // useState
     // useEffect
 
     return (
@@ -21,24 +21,19 @@ const BookingList = () => {
                         <table className="table">
                             <thead className="thead-light">
                                 <tr>
-                                    <th scope="col">Name</th>
-                                    <th scope="col">Email ID</th>
-                                    <th scope="col">Phone No</th>
-                                    <th scope="col">Massage</th>
-                                    <th scope="col">Status</th>
+                                    <th scope="col">House Name</th>
+                                    <th scope="col">Price</th>
+                                    <th scope="col">Action</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 {/* {
-                                    .map(info =>  <tr key={}>*/}
+            .map(info =>  <tr key={}>*/}
                                 <tr >
-                                    <td > Abu Horain</td>
-                                    <td> abu.horain20@gmail.com</td>
-                                    <td> 0174111111</td>
-                                    <td> jfjaljfajfjfjjjj</td>
+                                    <td > My House</td>
+                                    <td>$ 100</td>
                                     <td >
-                                        {/* input selector */}
-                                        <button> Done </button>
+                                        <button> View Details </button>
                                     </td>
                                 </tr>
                                 {/* ) */}
@@ -46,11 +41,10 @@ const BookingList = () => {
                             </tbody>
                         </table>
                     </div>
-
                 </div>
             </section>
         </main>
     );
 };
 
-export default BookingList;
+export default MyRent;
