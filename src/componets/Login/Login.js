@@ -1,11 +1,13 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import './Login.scss'
 import google from '../../images/google.png'
 import fbook from '../../images/fb.png'
 import { Row } from 'react-bootstrap';
+import { MyContext } from '../../App';
 
 const Login = () => {
+    const [loggedInUser, setLoggedInUser] = useContext(MyContext)
 
     return (
         <>            

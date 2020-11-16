@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import google from '../../images/google.png'
 import fbook from '../../images/fb.png'
+import { MyContext } from '../../App';
 
 const Register = () => {
+    const [loggedInUser, setLoggedInUser] = useContext(MyContext)
+    
     return (
         <>
             <div className="log">
