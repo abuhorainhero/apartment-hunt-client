@@ -8,6 +8,8 @@ import {
 } from "react-router-dom";
 import NotFound from './componets/NotFound/NotFound';
 import BookingList from './componets/Dashboard/BookingList/BookingList';
+import MyRent from './componets/Dashboard/MyRent/MyRent';
+import AddHouse from './componets/Dashboard/AddHouse/AddHouse';
 import Login from './componets/Login/Login';
 import Ragister from './componets/Ragister/Ragister';
 
@@ -28,16 +30,19 @@ function App() {
         </Route>
 
         <Route path="/addHouse">
-
-        </Route>
-        <Route path="/login">
-          <Login/>
-        </Route>
-        <Route path="/ragister">
-          <Ragister/>
+          <AddHouse />
         </Route>
 
         <Route path="/myRent">
+          <MyRent />
+        </Route>
+
+        <Route path="/login">
+          <Login />
+        </Route>
+        
+        <Route path="/ragister">
+          <Ragister />
         </Route>
 
         <Route path="*">
