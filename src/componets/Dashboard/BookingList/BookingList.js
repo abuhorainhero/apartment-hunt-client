@@ -1,11 +1,18 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import DbSidebar from '../DbSidebar/DbSidebar';
 import './BookingList.scss';
 import logo from '../../../logos/Logo.png';
 
 const BookingList = () => {
-    // state
-    // useEffect
+    const [booking, setBooking] = useState({})
+    useEffect(() => {
+        fetch("")
+        .then(res => res.json())
+        .then(data => {
+            console.log(data)
+        })
+        .catch(err => console.log(err))
+    }, [])
 
     return (
         <main>
