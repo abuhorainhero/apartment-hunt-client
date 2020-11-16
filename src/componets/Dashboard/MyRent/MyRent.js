@@ -1,6 +1,7 @@
 import React from 'react';
-import DbNavbar from '../DbNavbar/DbNavbar';
 import DbSidebar from '../DbSidebar/DbSidebar';
+import './MyRent.scss';
+import logo from '../../../logos/Logo.png';
 
 const MyRent = () => {
     // useState
@@ -8,18 +9,24 @@ const MyRent = () => {
 
     return (
         <main>
-            <section>
-                <DbNavbar />
+            <section className="row my-2">
+                <div className="col-md-2 d-flex justify-content-center">
+                    <img className="img-fluid" style={{ height: "50px" }} src={logo} alt="" />
+                </div>
+                <div className="col-md-10 d-flex justify-content-between">
+                    <h3 className="ml-5">My Rent House</h3>
+                    <h4 className="mr-5">{ } Abu Horain</h4>
+                </div>
             </section>
             <section className="row">
                 <div className="col-md-2">
                     <DbSidebar />
                 </div>
-                <div className="col-md-10">
-                    <div className="">
+                <div className="col-md-10 " style={{ height: "100vh", backgroundColor: '#E0F2F7' }}>
+                    <div className="myRentTable m-3 p-3">
 
-                        <table className="table">
-                            <thead className="thead-light">
+                        <table className="table ">
+                            <thead className="theadLight">
                                 <tr>
                                     <th scope="col">House Name</th>
                                     <th scope="col">Price</th>
@@ -33,7 +40,7 @@ const MyRent = () => {
                                     <td > My House</td>
                                     <td>$ 100</td>
                                     <td >
-                                        <button> View Details </button>
+                                        <button className="brandBtn"> View Details </button>
                                     </td>
                                 </tr>
                                 {/* ) */}

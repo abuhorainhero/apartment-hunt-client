@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import DbNavbar from '../DbNavbar/DbNavbar';
 import DbSidebar from '../DbSidebar/DbSidebar';
 import imgLogo from '../../../logos/cloud-upload-outline 1.png';
+import logo from '../../../logos/Logo.png';
+import './AddHouse.scss';
 
 const AddHouse = () => {
     const [info, setInfo] = useState({});
@@ -35,20 +36,26 @@ const AddHouse = () => {
         })
     }
 
-        
+
 
     return (
         <main>
-            <section>
-                <DbNavbar />
+            <section className="row my-2">
+                <div className="col-md-2 d-flex justify-content-center">
+                    <img className="img-fluid" style={{ height: "50px" }} src={logo} alt="" />
+                </div>
+                <div className="col-md-10 d-flex justify-content-between">
+                    <h3 className="ml-5">Add House</h3>
+                    <h4 className="mr-5">{ } Abu Horain</h4>
+                </div>
             </section>
             <section className="row">
                 <div className="col-md-2">
                     <DbSidebar />
                 </div>
-                <div className="col-md-10 ">
+                <div className="col-md-10 addHouseForm" style={{height: "100vh", backgroundColor: '#E0F2F7' }}>
                     <form onSubmit={handleSubmit}>
-                        <div className="row ">
+                        <div className="row m-3 p-3">
                             <div className="col-md-6">
                                 <div className="form-group">
                                     <label htmlFor="">Service Title</label> <br />
@@ -79,7 +86,7 @@ const AddHouse = () => {
                             </div>
                         </div>
                         <div className="d-flex flex-column align-items-end">
-                            <button type="submit" className="">Submit</button>
+                            <button type="submit" className="brandBtn mr-3">Submit</button>
                         </div>
                     </form>
 
