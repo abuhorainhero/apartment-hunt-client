@@ -1,17 +1,17 @@
-main {
+.mainContent {
   background-image: url("../../../images/Rectangle 13.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
 
-main .overlay {
+.mainContent .overlay {
   height: 55vh;
   background: rgba(0, 0, 0, 0.671);
   padding: 40px;
 }
 
-main h1 {
+.mainContent h1 {
   padding: 40px;
   color: white;
   text-transform: uppercase;
@@ -19,7 +19,7 @@ main h1 {
   font-size: 3rem;
 }
 
-main .find input {
+.mainContent .find input {
   width: 37%;
   padding: 10px 20px;
   margin-right: 10px;
@@ -28,7 +28,7 @@ main .find input {
   outline: none;
 }
 
-main .find .findButton {
+.mainContent .find .findButton {
   background: #275A53;
   color: white;
   font-weight: 500;

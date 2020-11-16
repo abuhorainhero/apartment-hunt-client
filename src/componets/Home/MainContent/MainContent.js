@@ -3,7 +3,7 @@ import './MainContent.css';
 
 const MainContent = () => {
     return (
-        <main>
+        <main className="mainContent">
             <div className="overlay">
                 <h1>Find Your House Rent</h1>
                 <div className='find'>

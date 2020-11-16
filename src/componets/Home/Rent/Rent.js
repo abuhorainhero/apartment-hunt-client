@@ -16,7 +16,7 @@ const Rent = () => {
     console.log(apartment)
 
     return (
-        <section className="py-4">
+        <section className="py-4 rentContainer">
             <div className="heading_part">
                 <h5>House Rent</h5>
                 <h2>Discover the Latest Rent <br/> available today</h2>
