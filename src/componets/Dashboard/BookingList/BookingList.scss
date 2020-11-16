@@ -1,0 +1,14 @@
+$tableBg: #fff;
+$headerBg: #F5F6FA;
+
+.bookingTable{
+    background-color: $tableBg;
+    border-radius: 20px;
+    .table{
+        .theadLight{
+            background-color: $headerBg;
+            border-radius: 20px !important;
+        }
+    
+    }
+}

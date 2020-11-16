@@ -3,8 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
 import NotFound from './componets/NotFound/NotFound';
 import BookingList from './componets/Dashboard/BookingList/BookingList';
