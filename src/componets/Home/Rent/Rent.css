@@ -1,0 +1,47 @@
+section .heading_part h5 {
+  color: #275A53;
+}
+
+section .heading_part h2 {
+  font-weight: bold;
+  font-size: 37px;
+  color: #16322E;
+}
+
+section .card {
+  border: none;
+}
+
+section .card-title {
+  text-align: left;
+  color: #16322E;
+  font-size: 22px;
+}
+
+section .card-body {
+  color: #16322E;
+}
+
+section .card-body p {
+  color: #979797;
+}
+
+section .card-body svg path {
+  fill: #979797;
+}
+
+section .card-foter {
+  margin-top: 40px;
+  border: none;
+  background-color: white;
+}
+
+section .card-foter .button {
+  background-color: #265952;
+  color: white;
+  border: none;
+  border-radius: 0px;
+  font-size: 15px;
+  padding: 12px 18px;
+}
+/*# sourceMappingURL=Rent.css.map */
