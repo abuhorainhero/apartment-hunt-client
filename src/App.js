@@ -12,11 +12,15 @@ import BookingList from './componets/Dashboard/BookingList/BookingList';
 import MyRent from './componets/Dashboard/MyRent/MyRent';
 import AddHouse from './componets/Dashboard/AddHouse/AddHouse';
 import Login from './componets/Login/Login';
-import Ragister from './componets/Ragister/Ragister';
+import Register from './componets/Register/Register';
+import { createContext, useState } from 'react';
+import PrivateRoute from './componets/PrivateRoute/PrivateRoute';
 
-
+export const MyContext = createContext()
 function App() {
+  const [loggedInUser, setLoggedInUser] = useState({})
   return (
+    <MyContext.Provider value={[loggedInUser, setLoggedInUser]}>
     <Router>
       <Switch>
         <Route exact path="/">
@@ -30,24 +34,23 @@ function App() {
         </Route>
 
 
-        <Route path="/bookingList">
+        <PrivateRoute path="/bookingList">
           <BookingList />
-        </Route>
+        </PrivateRoute>
 
-        <Route path="/addHouse">
+        <PrivateRoute path="/addHouse">
           <AddHouse />
-        </Route>
-
-        <Route path="/myRent">
+        </PrivateRoute>
+        <PrivateRoute path="/myRent">
           <MyRent />
-        </Route>
+        </PrivateRoute>
 
         <Route path="/login">
           <Login />
         </Route>
         
-        <Route path="/ragister">
-          <Ragister />
+        <Route path="/register">
+          <Register />
         </Route>
 
         <Route path="*">
@@ -55,6 +58,7 @@ function App() {
         </Route>
       </Switch>
     </Router>
+    </MyContext.Provider>
   );
 }
 

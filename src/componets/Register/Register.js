@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import google from '../../images/google.png'
 import fbook from '../../images/fb.png'
 
-const Ragister = () => {
+const Register = () => {
     return (
         <>
             <div className="log">
@@ -34,4 +34,4 @@ const Ragister = () => {
     );
 };
 
-export default Ragister;
+export default Register;

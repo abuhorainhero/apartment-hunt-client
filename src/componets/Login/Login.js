@@ -6,6 +6,7 @@ import fbook from '../../images/fb.png'
 import { Row } from 'react-bootstrap';
 
 const Login = () => {
+
     return (
         <>            
             <div className="log">
@@ -22,7 +23,7 @@ const Login = () => {
                             </div>
                             <Link to="./" className="col-md-6">Forget password</Link><br/> <br/>
                             <button type="submit" className="btn">Login</button><br/><br/><br/>
-                            <p className="mt-5 m-auto">Don't have an account?<Link rel="stylesheet" to="ragister">Create an account</Link></p>
+                            <p className="mt-5 m-auto">Don't have an account?<Link rel="stylesheet" to="register">Create an account</Link></p>
                         </Row>
                     </form>
                 </div>
