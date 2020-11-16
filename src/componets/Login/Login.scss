@@ -1,0 +1,59 @@
+$mainColor: #275a53;
+$bgColor: #e8f0fe;
+
+.log {
+    width: 500px;
+    margin: auto;
+    .login {
+        border: 1px solid gray;
+        border-radius: 8px;
+        padding: 65px;
+        background-color: $bgColor;
+        h2 {
+            color: rgb(17, 7, 7);
+        }
+        a {
+            color: $mainColor;
+        }
+    }
+    form {
+        .input {
+            width: 100%;
+            border: none;
+            border-bottom: 1px solid $mainColor;
+            padding: 15px;
+            margin-bottom: 25px;
+            background-color: $bgColor;
+        }
+        .btn {
+            margin: auto;
+            width: 75%;
+            background-color: $mainColor;
+            color: white;
+        }
+    }
+}
+.sign__with {
+    .btn_g {
+        width: 25%;
+        height: 50px;
+        border: 1px solid gray;
+        border-radius: 25px;
+        background: none;
+        position: relative;
+    }
+    .btn_g:focus {
+        border: none;
+    }
+    .google {
+        position: absolute;
+        width: 35px;
+        border-radius: 20px;
+        margin-top: 8px;
+        margin-left: 10px;
+    }
+    .facebook {
+        position: absolute;
+        width: 35px;
+    }
+}
