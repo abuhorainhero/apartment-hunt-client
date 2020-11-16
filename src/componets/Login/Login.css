@@ -1,0 +1,62 @@
+.log {
+  width: 500px;
+  margin: auto;
+}
+
+.log .login {
+  border: 1px solid gray;
+  border-radius: 8px;
+  padding: 65px;
+  background-color: #e8f0fe;
+}
+
+.log .login h2 {
+  color: #110707;
+}
+
+.log .login a {
+  color: #275a53;
+}
+
+.log form .input {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #275a53;
+  padding: 15px;
+  margin-bottom: 25px;
+  background-color: #e8f0fe;
+}
+
+.log form .btn {
+  margin: auto;
+  width: 75%;
+  background-color: #275a53;
+  color: white;
+}
+
+.sign__with .btn_g {
+  width: 25%;
+  height: 50px;
+  border: 1px solid gray;
+  border-radius: 25px;
+  background: none;
+  position: relative;
+}
+
+.sign__with .btn_g:focus {
+  border: none;
+}
+
+.sign__with .google {
+  position: absolute;
+  width: 35px;
+  border-radius: 20px;
+  margin-top: 8px;
+  margin-left: 10px;
+}
+
+.sign__with .facebook {
+  position: absolute;
+  width: 35px;
+}
+/*# sourceMappingURL=Login.css.map */
