@@ -1,0 +1,14 @@
+$btn-color: #275A53;
+$btn-text-color : #ffff;
+$btn-width: 130px;
+$btn-height: 45px;
+
+.btn{
+  background: $btn-color;
+  color: $btn-text-color;
+  width: $btn-width;
+  height: $btn-height;
+}
+body{
+  background: #F1F6F4;
+}

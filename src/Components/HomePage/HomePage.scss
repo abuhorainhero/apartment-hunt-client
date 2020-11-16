@@ -1,0 +1,41 @@
+$text-color: #16322E;
+.banner{
+    background-image: url(../../images/bg1.png);
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height:50vh;
+}
+
+.search-btn{
+    position: absolute;
+    top: 0;
+    right: 15px;
+    height: 100%;
+}
+.banner .form-control{
+    border:none;
+    padding-left: 20px;
+}
+.discovery{
+    font-weight: bold;
+    font-size: 34px;
+    // line-height: 50px;
+    color: $text-color;
+}
+.service-text{
+    color: $text-color;
+    font-weight: bold;
+}
+.service-img {
+    text-align: center;
+}
+
+.last-bg{
+    background-color: #275A53;
+}
+.location{
+    filter:brightness(100);
+    width: 30px;
+    height: 30px;
+}
