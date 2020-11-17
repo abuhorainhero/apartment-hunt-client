@@ -8,7 +8,7 @@ import google from '../../logos/Group 573.png'
 
 
 
-const SignUp = () => {
+const Login = () => {
     const [newUser, setNewUser] = useState(false);
     const [user, setUser] = useContext(UserContext);
     initializeLoginFramework();
@@ -139,12 +139,12 @@ const SignUp = () => {
 
 
 
-            <p style={{ color: 'red' }}>{user.error}</p>
+            <p style={{ color: 'red', textAlign: 'center'}}>{user.error}</p>
 
 
-            {user.success && <p style={{ color: 'green' }}>User {newUser ? 'created' : 'Logged In'} successfully</p>}
+            {user.success && <p style={{ color: 'green', textAlign: 'center' }}>User {newUser ? 'created' : 'Logged In'} successfully</p>}
         </>
     );
 };
 
-export default SignUp;
+export default Login;
