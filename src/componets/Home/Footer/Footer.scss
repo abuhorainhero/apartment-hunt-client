@@ -1,0 +1,25 @@
+footer{
+    background-color: #275A53;
+    color: white;
+    .box{
+        text-align: left;
+      .footer_ul{
+          list-style-type: none;
+          li{
+              margin: 5px;
+          }
+          .font-weight-bold{
+              font-size: 20px;
+              margin-bottom: 20px;
+          }
+          .social_link{
+              list-style-type: none;
+          }
+      }
+    }
+    svg.svg-inline--fa {
+        height: 30px!important;
+        width: 30px!important;
+        margin:10px 5px 10px 0px;
+    }
+}

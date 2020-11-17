@@ -1,0 +1,26 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.logo{
+    width: 100px;
+}
+.navbar-nav{
+    font-weight: 500;
+    padding: 20px 0px;
+    .nav-link{
+        margin-right: 20px;
+    }
+}
+.buttonLogin{
+    background-color:#275A53 ;
+    margin-right: 0px!important;
+    display: block;
+    a{
+        padding: 10px 25px;
+        color: white;
+        text-decoration: none;
+    }
+}

@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAGA,AAAA,aAAa,CAAA;EACT,gBAAgB,EAJV,IAAI;EAKV,aAAa,EAAE,IAAI;CAQtB;;AAVD,AAIQ,aAJK,CAGT,MAAM,CACF,WAAW,CAAA;EACP,gBAAgB,EAPjB,OAAO;EAQN,aAAa,EAAE,eAAe;CACjC",
+    "sources": [
+        "BookingList.scss"
+    ],
+    "names": [],
+    "file": "BookingList.css"
+}

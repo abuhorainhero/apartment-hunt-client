@@ -1,0 +1,38 @@
+.mainContent {
+  background-image: url("../../../images/Rectangle 13.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.mainContent .overlay {
+  height: 55vh;
+  background: rgba(0, 0, 0, 0.671);
+  padding: 40px;
+}
+
+.mainContent h1 {
+  padding: 40px;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 3rem;
+}
+
+.mainContent .find input {
+  width: 37%;
+  padding: 10px 20px;
+  margin-right: 10px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+}
+
+.mainContent .find .findButton {
+  background: #275A53;
+  color: white;
+  font-weight: 500;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+/*# sourceMappingURL=MainContent.css.map */

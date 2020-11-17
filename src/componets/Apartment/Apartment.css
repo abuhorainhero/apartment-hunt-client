@@ -1,0 +1,58 @@
+#apartment {
+  background-color: #FFFFFF;
+}
+
+main .overlay {
+  height: 34vh;
+  background: rgba(0, 0, 0, 0.671);
+  padding: 40px;
+}
+
+main .overlay h1 {
+  text-transform: capitalize;
+}
+
+.form {
+  background-color: #F4F4F4;
+  padding: 10px;
+}
+
+.form input, .form textarea {
+  width: 95%;
+  padding: 10px;
+  margin: 7px;
+  border: 1px solid #d6d4d4;
+}
+
+.form input:first-child {
+  margin-top: 50px;
+}
+
+.form input[type="submit"] {
+  background-color: #275A53;
+  color: white;
+  font-weight: 400;
+}
+
+.heading_ {
+  color: #275A53;
+  font-weight: 800;
+  font-size: 40px;
+}
+
+.product-details {
+  text-align: left;
+}
+
+.product-details h3 {
+  font-weight: bold;
+  margin-top: 50px;
+}
+
+.product-details p {
+  margin: 5px 0px;
+  color: #5a5a5a;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+}
+/*# sourceMappingURL=Apartment.css.map */
