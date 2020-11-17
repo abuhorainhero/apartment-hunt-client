@@ -9,7 +9,7 @@ const BookingList = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     const [booking, setBooking] = useState([])
     useEffect(() => {
-        fetch("http://localhost:5000/bookinglist")
+        fetch("https://peaceful-dusk-81503.herokuapp.com/bookinglist")
         .then(res => res.json())
         .then(data =>setBooking(data) )
         .catch(err => console.log(err))

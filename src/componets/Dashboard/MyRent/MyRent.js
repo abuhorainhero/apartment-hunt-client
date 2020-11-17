@@ -9,7 +9,7 @@ const MyRent = () => {
     const [rentList, setRentList] = useState([])
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     useEffect(() => {
-        fetch(`http://localhost:5000/booking?booking=${loggedInUser.email}`)
+        fetch(`https://peaceful-dusk-81503.herokuapp.com/booking?booking=${loggedInUser.email}`)
         .then(res => res.json())
         .then(data => setRentList(data))
         .catch(err => console.log(err))

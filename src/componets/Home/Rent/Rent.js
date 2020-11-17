@@ -12,7 +12,7 @@ const Rent = () => {
     const [data, setData] = useState([]);
  
     useEffect(()=>{
-        fetch('http://localhost:5000/appoinments')
+        fetch('https://peaceful-dusk-81503.herokuapp.com/appoinments')
         .then(res => res.json())
         .then(data => setApartment(data))
     },[])

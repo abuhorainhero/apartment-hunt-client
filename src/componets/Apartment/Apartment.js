@@ -18,7 +18,7 @@ const Apartment = () => {
        const {name, price, location} = apartment;
        const total = { name, price, location ,...data}
         console.log(total)
-      fetch('http://localhost:5000/booking',{
+      fetch('https://peaceful-dusk-81503.herokuapp.com/booking',{
           method:"POST",
           headers: {
             'Content-type': 'application/json; charset=UTF-8',
@@ -36,7 +36,7 @@ const Apartment = () => {
 
         const {id} = useParams();
         useEffect(()=>{
-            fetch(`http://localhost:5000/apartment/?id=${id}`)
+            fetch(`https://peaceful-dusk-81503.herokuapp.com/apartment/?id=${id}`)
             .then(res => res.json())
             .then(data => setApartment(data));
         },[])

@@ -30,7 +30,7 @@ const AddHouse = () => {
         e.preventDefault();
        const image = {img:'https://i.ibb.co/x6jR0GP/Rectangle-403.png'}
         const totalFormData =  {...info, ...image}
-        fetch("http://localhost:5000/addApartment", {
+        fetch("https://peaceful-dusk-81503.herokuapp.com/addApartment", {
             method: "POST",
             headers: {
                 'Content-type': 'application/json; charset=UTF-8',
