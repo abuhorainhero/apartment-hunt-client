@@ -1,10 +1,11 @@
 import React, { useContext } from 'react';
 import { Redirect, Route } from 'react-router-dom';
-import { MyContext } from '../../App';
+import { UserContext } from '../../App';
+
 
 const PrivateRoute = ({ children, ...rest }) => {
-    const [loggedInUser, setLoggedInUser] = useContext(MyContext);
-
+    
+    const [loggedInUser, setLoggedInUser] = useContext(UserContext)
     const isLoggedIn = () => {
         const token = sessionStorage.getItem('token');
         if (!token) {

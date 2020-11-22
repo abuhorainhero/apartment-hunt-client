@@ -1,16 +1,17 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import DbSidebar from '../DbSidebar/DbSidebar';
 import './BookingList.scss';
 import logo from '../../../logos/Logo.png';
+import { UserContext } from '../../../App';
+import { Link } from 'react-router-dom';
 
 const BookingList = () => {
-    const [booking, setBooking] = useState({})
+    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+    const [booking, setBooking] = useState([])
     useEffect(() => {
-        fetch("")
+        fetch("https://peaceful-dusk-81503.herokuapp.com/bookinglist")
         .then(res => res.json())
-        .then(data => {
-            console.log(data)
-        })
+        .then(data =>setBooking(data) )
         .catch(err => console.log(err))
     }, [])
 
@@ -18,11 +19,11 @@ const BookingList = () => {
         <main>
             <section className="row my-2">
                 <div className="col-md-2 d-flex justify-content-center">
-                    <img className="img-fluid" style={{ height: "50px" }} src={logo} alt="" />
+                <Link to="/">   <img className="img-fluid" style={{ height: "50px" }} src={logo} alt="" /></Link>
                 </div>
                 <div className="col-md-10 d-flex justify-content-between">
                     <h3 className="ml-5">Booking List</h3>
-                    <h4 className="mr-5">{ } Abu Horain</h4>
+                    <h4 className="mr-5">{ loggedInUser.name}</h4>
                 </div>
             </section>
             <section className="row">
@@ -37,7 +38,8 @@ const BookingList = () => {
                                 <tr>
                                     <th scope="col">Name</th>
                                     <th scope="col">Email ID</th>
-                                    <th scope="col">Phone No</th>
+                                 
+                                    <th scope="col">Phone</th>
                                     <th scope="col">Massage</th>
                                     <th scope="col">Status</th>
                                 </tr>
@@ -45,16 +47,19 @@ const BookingList = () => {
                             <tbody>
                                 {/* {
                                     .map(info =>  <tr key={}>*/}
-                                <tr >
-                                    <td > Abu Horain</td>
-                                    <td> abu.horain20@gmail.com</td>
-                                    <td> 0174111111</td>
-                                    <td> jfjaljfajfjfjjjj</td>
+                             {
+                                 booking.map(book =>   <tr >
+                                    <td >{book.name}</td>
+                                 <td>{book.email}</td>
+                                 <td>{book.phon}</td>
+                               
+                                 <td>{book.message}</td>
                                     <td >
                                         {/* input selector */}
-                                        <button className='brandBtn'> Done </button>
+                                        <button className='brandBtn'> Pending </button>
                                     </td>
-                                </tr>
+                                </tr>)
+                             }
                                 {/* ) */}
                                 {/* } */}
                             </tbody>

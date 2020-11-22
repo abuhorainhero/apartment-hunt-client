@@ -7,12 +7,19 @@
 
 ## Technology
 <ul>
-<li>React</li>
-<li>JavaScript</li>
-<li>BootStrap4</li>
-<li>HTML5</li>
-<li>SCSS</li>
-<li>MongoDB</li>
-<li>Node.js</li>
-<li>Express.js</li>
+    <li>React</li>
+    <li>React-Router</li>
+    <li>JavaScript</li>
+    <li>BootStrap4</li>
+    <li>HTML5</li>
+    <li>SCSS</li>
+    <li>MongoDB</li>
+    <li>Node.js</li>
+    <li>Express.js</li>
 </ul>
+
+<a href="https://">Live Website</a>
+<br/>
+<a href="https://">Live API</a>
+<br/>
+<a href="https://">Server Github</a>

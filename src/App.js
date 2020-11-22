@@ -11,16 +11,42 @@ import NotFound from './componets/NotFound/NotFound';
 import BookingList from './componets/Dashboard/BookingList/BookingList';
 import MyRent from './componets/Dashboard/MyRent/MyRent';
 import AddHouse from './componets/Dashboard/AddHouse/AddHouse';
-import Login from './componets/Login/Login';
-import Register from './componets/Register/Register';
-import { createContext, useState } from 'react';
-import PrivateRoute from './componets/PrivateRoute/PrivateRoute';
 
-export const MyContext = createContext()
+import Register from './componets/Register/Register';
+import { createContext, useEffect, useState } from 'react';
+import PrivateRoute from './componets/PrivateRoute/PrivateRoute';
+import Login from './componets/Login/Login';
+import { initializeLoginFramework, userLogin } from './componets/Login/LoginManager';
+
+export const UserContext = createContext();
 function App() {
-  const [loggedInUser, setLoggedInUser] = useState({})
+  const [loggedInUser, setLoggedInUser] = useState({});
+  const [user, setUser] = useState({
+    isSignedIn: false,
+    name: '',
+    email: '',
+    password: '',
+    photo: ''
+  });
+  initializeLoginFramework();
+  useEffect(() => {
+    const LogIn = userLogin(function (cv) {
+     
+
+      const signedInUser = {
+        isSignedIn: true,
+        name: cv.displayName,
+        email: cv.email,
+        photo: cv.photoURL,
+        success: true
+
+      };
+      setLoggedInUser(signedInUser);
+    });
+
+  }, [])
   return (
-    <MyContext.Provider value={[loggedInUser, setLoggedInUser]}>
+    <UserContext.Provider value={[loggedInUser, setLoggedInUser, user, setUser]}>
     <Router>
       <Switch>
         <Route exact path="/">
@@ -29,7 +55,7 @@ function App() {
         <Route path="/home">
             <Home></Home>
         </Route>
-        <Route path="/apartment">
+        <Route path="/apartment/:id">
             <Apartment></Apartment>
         </Route>
 
@@ -46,7 +72,7 @@ function App() {
         </PrivateRoute>
 
         <Route path="/login">
-          <Login />
+          <Login></Login>
         </Route>
         
         <Route path="/register">
@@ -58,7 +84,7 @@ function App() {
         </Route>
       </Switch>
     </Router>
-    </MyContext.Provider>
+    </UserContext.Provider>
   );
 }
 

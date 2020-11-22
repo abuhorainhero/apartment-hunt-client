@@ -1,16 +1,17 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import DbSidebar from '../DbSidebar/DbSidebar';
 import './MyRent.scss';
 import logo from '../../../logos/Logo.png';
+import { UserContext } from '../../../App';
+import { Link } from 'react-router-dom';
 
 const MyRent = () => {
-    const [rentList, setRentList] = useState({})
+    const [rentList, setRentList] = useState([])
+    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     useEffect(() => {
-        fetch("")
+        fetch(`https://peaceful-dusk-81503.herokuapp.com/booking?booking=${loggedInUser.email}`)
         .then(res => res.json())
-        .then(data => {
-            console.log(data)
-        })
+        .then(data => setRentList(data))
         .catch(err => console.log(err))
     }, [])
 
@@ -18,11 +19,11 @@ const MyRent = () => {
         <main>
             <section className="row my-2">
                 <div className="col-md-2 d-flex justify-content-center">
-                    <img className="img-fluid" style={{ height: "50px" }} src={logo} alt="" />
+                  <Link to="/"> <img className="img-fluid" style={{ height: "50px" }} src={logo} alt="" /></Link> 
                 </div>
                 <div className="col-md-10 d-flex justify-content-between">
                     <h3 className="ml-5">My Rent House</h3>
-                    <h4 className="mr-5">{ } Abu Horain</h4>
+                    <h4 className="mr-5">{ loggedInUser.name} </h4>
                 </div>
             </section>
             <section className="row">
@@ -43,13 +44,15 @@ const MyRent = () => {
                             <tbody>
                                 {/* {
             .map(info =>  <tr key={}>*/}
-                                <tr >
-                                    <td > My House</td>
-                                    <td>$ 100</td>
+                             {
+                                 rentList.map(rent =>   <tr >
+                                    <td >{rent.name}</td>
+                                 <td>${rent.price}</td>
                                     <td >
                                         <button className="brandBtn"> View Details </button>
                                     </td>
-                                </tr>
+                                </tr>)
+                             }
                                 {/* ) */}
                                 {/* } */}
                             </tbody>

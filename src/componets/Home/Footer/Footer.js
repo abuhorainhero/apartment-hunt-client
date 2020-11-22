@@ -6,7 +6,7 @@ import {  faFacebookSquare, faInstagramSquare, faLinkedin, faYoutube } from '@fo
 
 const Footer = () => {
     return (
-        <footer className="py-5 ">
+        <footer className="py-5 " id="footer">
             <div className="container">
                 <div className="row">
                {/* Fist col md 3 */}

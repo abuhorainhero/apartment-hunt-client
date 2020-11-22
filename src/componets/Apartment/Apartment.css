@@ -2,13 +2,13 @@
   background-color: #FFFFFF;
 }
 
-main .overlayapartment {
+main .overlay {
   height: 34vh;
   background: rgba(0, 0, 0, 0.671);
   padding: 40px;
 }
 
-main .overlayapartment h1 {
+main .overlay h1 {
   text-transform: capitalize;
 }
 

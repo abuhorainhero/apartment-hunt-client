@@ -6,7 +6,7 @@ import lessee1 from '../../../logos/lessee 1.png';
 
 const Services = () => {
     return (
-        <section className="py-5">
+        <section className="py-5" id="about">
                <div className="heading_part">
                 <h5>House Rent</h5>
                 <h2>We're an agency tailored to all <br/> client's needs that always delivers </h2>
