@@ -18,8 +18,8 @@
     <li>Express.js</li>
 </ul>
 
-<a href="https://aparment-hunt.netlify.app/">Live Website</a>
+<a target="_blank" href="https://aparment-hunt.netlify.app/">Live Website</a>
 <br/>
-<a href="https://peaceful-dusk-81503.herokuapp.com/">Live API</a>
+<a target="_blank" href="https://peaceful-dusk-81503.herokuapp.com/">Live API</a>
 <br/>
-<a href="https://github.com/mamunur13525/appoinment-hunt-server">Server Github</a>
+<a target="_blank" href="https://github.com/mamunur13525/appoinment-hunt-server">Server Github</a>
